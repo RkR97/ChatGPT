@@ -14,6 +14,7 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios.post("http://localhost:5000/chat", { prompt: prompt, level: level }).then((res) => {
+      console.log(res.data.data.content)
       setResponse(res.data.data.content)
     }).catch((err) => {
       console.log(err)
@@ -38,7 +39,7 @@ function App() {
       </form>
       <br />
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <div className='response' style={{ width: "50%" }}>
+        <div className='response' style={{ width: "50%", textAlign: "left" }}>
           <ReactMarkdown>{response}</ReactMarkdown>
         </div>
       </div>
