@@ -32,7 +32,11 @@ app.post('/chat', async (req, res) => {
                 4) Dependencies
                 5) Approach to Testing
                 6) Testing effort Estimate (WBS)
-                To fill each section, refer to the following release data text from the system:` },
+                To fill each section, refer to the following release data text from the system:
+                Send the response in markdown
+                `
+
+                },
                 { "role": "user", "content": prompt }
             ],
             max_tokens: 500
